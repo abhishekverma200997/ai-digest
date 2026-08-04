@@ -1,12 +1,15 @@
 """
 ai-digest — Stage 1: The plumbing.
 
-Reads RSS feeds, remembers what it has seen, prints new items.
-No LLM. No email yet. Just the skeleton every agent needs:
-  perception (fetch) → memory (dedupe) → action (output).
+Reads RSS feeds, remembers what it has seen, emails new items.
+No LLM yet. Just the skeleton every agent needs:
+  perception (fetch) → memory (dedupe) → action (email).
 """
 import json
+import os
+import smtplib
 from datetime import datetime, timezone
+from email.message import EmailMessage
 from pathlib import Path
 
 import feedparser
@@ -43,10 +46,7 @@ def save_seen(seen):
 
 
 def item_id(entry):
-    """
-    Stable unique ID for a feed entry.
-    Prefer entry.id (RFC-required unique identifier); fall back to link, then title.
-    """
+    """Stable unique ID for a feed entry."""
     return entry.get("id") or entry.get("link") or entry.get("title")
 
 
@@ -110,12 +110,42 @@ def format_digest(items):
     return "\n".join(lines)
 
 
+# --- Action: email delivery ---
+def send_email(subject, body):
+    """Send the digest via Gmail SMTP. Skips if credentials aren't set."""
+    gmail_user = os.environ.get("GMAIL_USER")
+    gmail_pass = os.environ.get("GMAIL_APP_PASSWORD")
+
+    if not gmail_user or not gmail_pass:
+        print("⚠️  GMAIL_USER or GMAIL_APP_PASSWORD not set — skipping email.")
+        return
+
+    to_addr = os.environ.get("DIGEST_TO", gmail_user)
+
+    msg = EmailMessage()
+    msg["Subject"] = subject
+    msg["From"] = gmail_user
+    msg["To"] = to_addr
+    msg.set_content(body)
+
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+        smtp.login(gmail_user, gmail_pass)
+        smtp.send_message(msg)
+    print(f"📧 Sent digest to {to_addr}")
+
+
 # --- Entry point ---
 def main():
     items = fetch_new_items()
     digest = format_digest(items)
     print()
     print(digest)
+
+    if items:
+        subject = f"ai-digest — {len(items)} new items — {datetime.now(timezone.utc).strftime('%Y-%m-%d')}"
+        send_email(subject, digest)
+    else:
+        print("Nothing new — skipping email.")
 
 
 if __name__ == "__main__":
