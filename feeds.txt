@@ -1,0 +1,29 @@
+# --- Research labs ---
+#need to find anthropic rss
+#https://www.anthropic.com/rss.xml
+https://openai.com/news/rss.xml
+https://deepmind.google/blog/rss.xml
+https://huggingface.co/blog/feed.xml
+https://research.google/blog/rss/
+
+# Meta AI feed is currently broken. Coverage picked up via Import AI and Interconnects.
+# https://ai.meta.com/blog/rss/
+
+# --- Individual practitioners ---
+https://simonwillison.net/atom/everything/
+https://magazine.sebastianraschka.com/feed
+https://www.interconnects.ai/feed
+https://jack-clark.net/feed/
+https://lilianweng.github.io/index.xml
+https://huyenchip.com/feed.xml
+
+# to do --- YouTube channels ---
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCPk8m_r6fkUSYmvgCBwq-sw
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew
+
+# --- Newsletters (to be added via kill-the-newsletter side quest) ---
+# The Batch (DeepLearning.AI)
+# TLDR AI
+# Don't Worry About the Vase (Zvi Mowshowitz)
