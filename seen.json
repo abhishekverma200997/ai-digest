@@ -1224,6 +1224,7 @@
   "https://openai.com/index/attacking-machine-learning-with-adversarial-examples",
   "https://openai.com/index/atv-big-air-tour",
   "https://openai.com/index/australian-payments-plus",
+  "https://openai.com/index/australian-youth-safety-blueprint",
   "https://openai.com/index/autoscout24",
   "https://openai.com/index/avatarin",
   "https://openai.com/index/aws-and-openai-partnership",
@@ -1610,6 +1611,7 @@
   "https://openai.com/index/helping-disaster-response-teams-asia",
   "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
   "https://openai.com/index/helping-people-when-they-need-it-most",
+  "https://openai.com/index/hex-gpt-6-astra",
   "https://openai.com/index/hibob",
   "https://openai.com/index/hierarchical-text-conditional-image-generation-with-clip-latents",
   "https://openai.com/index/higgsfield",
@@ -2358,6 +2360,7 @@
   "https://research.google/blog/making-llms-more-accurate-by-using-all-of-their-layers/",
   "https://research.google/blog/mapping-global-methane-emissions-from-space-with-deep-learning/",
   "https://research.google/blog/mapping-the-modern-world-how-s2vec-learns-the-language-of-our-cities/",
+  "https://research.google/blog/millemiglia-a-realistic-instance-generator-for-middle-mile-logistics/",
   "https://research.google/blog/neuralgcm-harnesses-ai-to-better-simulate-long-range-global-precipitation/",
   "https://research.google/blog/new-framework-for-auditing-machine-unlearning/",
   "https://research.google/blog/next-generation-medical-image-interpretation-with-medgemma-15-and-medical-speech-to-text-with-medasr/",
@@ -2575,6 +2578,9 @@
   "https://simonwillison.net/2026/Sep/17/compaction-summaries/",
   "https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm/",
   "https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans/",
+  "https://simonwillison.net/2026/Sep/18/gemini-hacked-three-companies/",
+  "https://simonwillison.net/2026/Sep/18/probably-gonna-eat-you/",
+  "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
   "https://simonwillison.net/2026/Sep/18/the-creative-spirit-of-who-framed-roger-rabbit/",
   "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
   "https://simonwillison.net/2026/Sep/2/llm-anthropic/",
@@ -2629,5 +2635,6 @@
   "https://www.interconnects.ai/p/teaching-everyone-to-fish-for-tokens",
   "https://www.interconnects.ai/p/the-distillation-panic",
   "https://www.interconnects.ai/p/welcome-to-the-agi-era-of-ai-governance",
-  "https://www.interconnects.ai/p/when-will-average-people-feel-ais"
+  "https://www.interconnects.ai/p/when-will-average-people-feel-ais",
+  "https://www.interconnects.ai/p/where-i-stand-on-rsi"
 ]
